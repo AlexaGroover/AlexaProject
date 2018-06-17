@@ -1,0 +1,54 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "third demo",
+			"types": [
+
+			],
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"samples": [
+
+					]
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": [
+
+					]
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": [
+
+					]
+				},
+				{
+					"name": "HelloWorldIntent",
+					"slots": [
+
+					],
+					"samples": [
+						"hello",
+						"say hello",
+						"say hello world"
+					]
+				},
+				{
+					"name": "IntroWithAge",
+					"slots": [{
+						"name": "PersonName",
+						"type": "AMAZON.Person"
+					}, {
+						"name": "Age",
+						"type": "AMAZON.NUMBER"
+					}],
+					"samples": [
+						"Myself {PersonName}",
+						"Myself {PersonName} and my age is {Age}"
+					]
+				}
+			]
+		}
+	}
+}

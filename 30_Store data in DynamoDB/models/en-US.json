@@ -1,0 +1,208 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "third demo",
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "HelloWorldIntent",
+					"slots": [],
+					"samples": [
+						"hello",
+						"say hello",
+						"say hello world"
+					]
+				},
+				{
+					"name": "IntroWithAge",
+					"slots": [{
+							"name": "PersonName",
+							"type": "AMAZON.Person"
+						},
+						{
+							"name": "Age",
+							"type": "AMAZON.NUMBER"
+						}
+					],
+					"samples": [
+						"Myself {PersonName}",
+						"Myself {PersonName} and my age is {Age}"
+					]
+				},
+				{
+					"name": "AddUserPrefrence",
+					"slots": [{
+							"name": "PersonName",
+							"type": "AMAZON.Person",
+							"samples": [
+								"My name is {PersonName}",
+								"I am {PersonName}",
+								"{PersonName}"
+							]
+						},
+						{
+							"name": "CountryName",
+							"type": "AMAZON.Country",
+							"samples": [
+								"I want to visit {CountryName}",
+								"{CountryName}"
+							]
+						},
+						{
+							"name": "Count",
+							"type": "AMAZON.NUMBER",
+							"samples": [
+								"with {Count} other",
+								"{Count}"
+							]
+						}
+					],
+					"samples": [
+						"My name is {PersonName} and I want to visit {CountryName} with my {Count} friends",
+						"With {Count} friends",
+						"I want to visit {CountryName}",
+						"My name is {PersonName}"
+					]
+				},
+				{
+					"name": "FoodOrderIntent",
+					"slots": [{
+							"name": "OrderQuantity",
+							"type": "AMAZON.NUMBER"
+						},
+						{
+							"name": "OrderItem",
+							"type": "AMAZON.Food"
+						}
+					],
+					"samples": [
+						"{OrderQuantity} {OrderItem}",
+						"I would like to order {OrderQuantity} {OrderItem}"
+					]
+				},
+                {
+                    "name": "SaveUserPreference",
+                    "slots": [],
+                    "samples": [
+                        "Store data",
+                        "Save my preference"
+                    ]
+                },
+                {
+                    "name": "ShowUserPreference",
+                    "slots": [],
+                    "samples": [
+                        "Show me preference",
+                        "Show user data"
+                    ]
+                }
+			],
+			"types": []
+		},
+		"dialog": {
+			"intents": [{
+					"name": "AddUserPrefrence",
+					"confirmationRequired": false,
+					"prompts": {},
+					"slots": [{
+							"name": "PersonName",
+							"type": "AMAZON.Person",
+							"confirmationRequired": false,
+							"elicitationRequired": true,
+							"prompts": {
+								"elicitation": "Elicit.Slot.664214356346.138385230908"
+							}
+						},
+						{
+							"name": "CountryName",
+							"type": "AMAZON.Country",
+							"confirmationRequired": false,
+							"elicitationRequired": true,
+							"prompts": {
+								"elicitation": "Elicit.Slot.664214356346.1030841780901"
+							}
+						},
+						{
+							"name": "Count",
+							"type": "AMAZON.NUMBER",
+							"confirmationRequired": true,
+							"elicitationRequired": true,
+							"prompts": {
+								"confirmation": "Confirm.Slot.986576492788.656708798744",
+								"elicitation": "Elicit.Slot.664214356346.870704777881"
+							}
+						}
+					]
+				},
+				{
+					"name": "FoodOrderIntent",
+					"confirmationRequired": true,
+					"prompts": {
+						"confirmation": "Confirm.Intent.117565284896"
+					},
+					"slots": [{
+							"name": "OrderQuantity",
+							"type": "AMAZON.NUMBER",
+							"confirmationRequired": false,
+							"elicitationRequired": false,
+							"prompts": {}
+						},
+						{
+							"name": "OrderItem",
+							"type": "AMAZON.Food",
+							"confirmationRequired": false,
+							"elicitationRequired": false,
+							"prompts": {}
+						}
+					]
+				}
+			]
+		},
+		"prompts": [{
+				"id": "Elicit.Slot.664214356346.138385230908",
+				"variations": [{
+					"type": "PlainText",
+					"value": "Tell me your name"
+				}]
+			},
+			{
+				"id": "Elicit.Slot.664214356346.1030841780901",
+				"variations": [{
+					"type": "PlainText",
+					"value": "Which Country you want to visit?"
+				}]
+			},
+			{
+				"id": "Elicit.Slot.664214356346.870704777881",
+				"variations": [{
+					"type": "PlainText",
+					"value": "With how many friends?"
+				}]
+			},
+			{
+				"id": "Confirm.Slot.986576492788.656708798744",
+				"variations": [{
+					"type": "PlainText",
+					"value": "You want to visit with {Count} friends. Right?"
+				}]
+			},
+			{
+				"id": "Confirm.Intent.117565284896",
+				"variations": [{
+					"type": "PlainText",
+					"value": "Are you sure want to buy {OrderQuantity} {OrderItem} ?"
+				}]
+			}
+		]
+	}
+}

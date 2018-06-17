@@ -1,0 +1,140 @@
+{
+    "version": "string",
+    "sessionAttributes": {
+        "key": "value"
+    },
+    "response": {
+        "outputSpeech": {
+            "type": "PlainText",
+            "text": "Plain text string to speak",
+            "ssml": "<speak>SSML text string to speak</speak>"
+        },
+        "reprompt": {
+            "outputSpeech": {
+                "type": "PlainText",
+                "text": "Plain text string to speak",
+                "ssml": "<speak>SSML text string to speak</speak>"
+            }
+        },
+        "shouldEndSession": true,
+        "card": {
+            "type": "Simple",
+            "title": "string title",
+            "content": "string text content."
+        },
+        "card": {
+            "type": "Standard",
+            "title": "string title",
+            "content": "string content",
+            "text": "string text content",
+            "image": {
+                "smallImageUrl": "<image-url>",
+                "largeImageUrl": "<image-url>"
+            }
+        },
+        "directives": [{
+                "type": "Dialog.ElicitSlot",
+                "slotToElicit": "<slot-name>",
+                "updatedIntent": {
+                    "name": "<intent-name>",
+                    "confirmationStatus": "NONE",
+                    "slots": {
+                        "<slot-name>": {
+                            "name": "<slot-name>",
+                            "confirmationStatus": "NONE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "Dialog.ConfirmSlot",
+                "slotToConfirm": "<slot-name>",
+                "updatedIntent": {
+                    "name": "<intent-name>",
+                    "confirmationStatus": "NONE",
+                    "slots": {
+                        "<slot-name>": {
+                            "name": "<slot-name>",
+                            "value": "string",
+                            "confirmationStatus": "NONE"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "AudioPlayer.Play",
+                "playBehavior": "ENQUEUE",
+                "audioItem": {
+                    "stream": {
+                        "token": "string-token",
+                        "url": "<audio-url>",
+                        "offsetInMilliseconds": 0
+                    },
+                    "metadata": {
+                        "title": "title of the track to display",
+                        "subtitle": "subtitle of the track to display",
+                        "art": {
+                            "sources": [{
+                                "url": "<album-art-url>"
+                            }]
+                        },
+                        "backgroundImage": {
+                            "sources": [{
+                                "url": "<background-url>"
+                            }]
+                        }
+                    }
+                }
+            },
+            {
+                "type": "VideoApp.Launch",
+                "videoItem": {
+                    "source": "<video-url>",
+                    "metadata": {
+                        "title": "string title",
+                        "subtitle": "string secondary title"
+                    }
+                }
+            },
+            {
+                "type": "Hint",
+                "hint": {
+                    "type": "PlainText",
+                    "text": "<text-to-be-display>"
+                }
+            },
+            {
+                "type": "Display.RenderTemplate",
+                "template": {
+                    "type": "ListTemplate2",
+                    "token": "string",
+                    "backButton": "HIDDEN",
+                    "title": "string",
+                    "listItems": [{
+                        "token": "<unique-value>",
+                        "image": {
+                            "sources": [{
+                                "url": "<image-url>"
+                            }],
+                            "contentDescription": "string"
+                        },
+                        "textContent": {
+                            "primaryText": {
+                                "type": "RichText",
+                                "text": "<font size='7'>string</font> <br/> In HTML Format"
+                            },
+                            "secondaryText": {
+                                "text": "string",
+                                "type": "PlainText"
+                            },
+                            "tertiaryText": {
+                                "text": "string",
+                                "type": "PlainText"
+                            }
+                        }
+                    }]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,139 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "second demo",
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "HelloIntent",
+					"samples": [
+						"Hello ",
+						"Hey",
+						"Hi"
+					]
+				},
+				{
+					"name": "DisplayGreetings",
+					"slots": [{
+						"name": "PersonName",
+						"type": "AMAZON.Person"
+					}],
+					"samples": [
+						"My name is {PersonName}",
+						"I am {PersonName}"
+					]
+				},
+				{
+					"name": "FavoriteLanguage",
+					"slots": [{
+						"name": "LanguageName",
+						"type": "ProgrammingLanguages"
+					}],
+					"samples": [
+						"My favorite language is {LanguageName}",
+						"I love {LanguageName}",
+						"I like {LanguageName}"
+					]
+				},
+				{
+					"name": "GenerateCard",
+					"samples": [
+						"Generate card",
+						"Display Image"
+					]
+				},
+				{
+					"name": "MusicIntent",
+					"samples": [
+						"Play Music",
+						"Start Music",
+						"I would like to hear Music"
+					]
+				},
+				{
+					"name": "AMAZON.PauseIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.ResumeIntent",
+					"samples": []
+				},
+				{
+					"name": "ShowVideo",
+					"samples": [
+						"Show video",
+						"Play video"
+					]
+				},
+				{
+					"name": "ShowHint",
+					"slots": [],
+					"samples": [
+						"Display Hint",
+						"Show me hint",
+						"Display other commands"
+					]
+				},
+				{
+					"name": "ShowAddress",
+					"slots": [],
+					"samples": [
+						"What is my address",
+						"Show my address"
+					]
+				}
+			],
+			"types": [{
+				"values": [{
+						"id": "1",
+						"name": {
+							"value": "Python",
+							"synonyms": [
+								"Py"
+							]
+						}
+					},
+					{
+						"id": "2",
+						"name": {
+							"value": "C#",
+							"synonyms": [
+								"dot net",
+								"C sharpe"
+							]
+						}
+					},
+					{
+						"id": "3",
+						"name": {
+							"value": "PHP"
+						}
+					},
+					{
+						"id": "4",
+						"name": {
+							"value": "JavaScript"
+						}
+					},
+					{
+						"id": "5",
+						"name": {
+							"value": "Ruby"
+						}
+					}
+				],
+				"name": "ProgrammingLanguages"
+			}]
+		}
+	}
+}

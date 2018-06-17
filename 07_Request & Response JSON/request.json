@@ -1,0 +1,68 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": false,
+        "sessionId": "amzn1.echo-api.session.<unique-value>",
+        "application": {
+            "applicationId": "amzn1.ask.skill.<unique-value>"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.<unique-value>",
+            "accessToken": "string",
+            "permissions": {
+                "consentToken": "string"
+            }
+        },
+        "attributes": {
+            "key": "string"
+        }
+    },
+    "context": {
+        "AudioPlayer": {
+            "playerActivity": "PLAYING",
+            "token": "<audioplayer-token>",
+            "offsetInMilliseconds": 0
+        },
+        "Display": {
+            "token": "<display-token>"
+        },
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.<unique-value>"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.<unique-value>"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.<unique-value>",
+                "supportedInterfaces": {
+                    "AudioPlayer": {},
+                    "Display": {
+                        "templateVersion": "1.0",
+                        "markupVersion": "1.0"
+                    }
+                }
+            },
+            "apiEndpoint": "https://api.amazonalexa.com",
+            "apiAccessToken": "<unique-value>"
+        }
+    },
+    "request": {
+        "type": "<request-name>",
+        "requestId": "amzn1.echo-api.request.<unique-value>",
+        "timestamp": "2018-03-25T07:17:32Z",
+        "locale": "en-US",
+        "intent": {
+            "name": "<intent-name>",
+            "confirmationStatus": "NONE",
+            "slots": {
+                "<slot-name>": {
+                    "name": "<slot-name>",
+                    "value": "<slot-value>",
+                    "confirmationStatus": "NONE",
+                    "resolutions": {}
+                }
+            }
+        }
+    }
+}

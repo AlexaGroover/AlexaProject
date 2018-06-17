@@ -1,0 +1,138 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "third demo",
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "HelloWorldIntent",
+					"slots": [],
+					"samples": [
+						"hello",
+						"say hello",
+						"say hello world"
+					]
+				},
+				{
+					"name": "IntroWithAge",
+					"slots": [{
+							"name": "PersonName",
+							"type": "AMAZON.Person"
+						},
+						{
+							"name": "Age",
+							"type": "AMAZON.NUMBER"
+						}
+					],
+					"samples": [
+						"Myself {PersonName}",
+						"Myself {PersonName} and my age is {Age}"
+					]
+				},
+				{
+					"name": "AddUserPrefrence",
+					"slots": [{
+							"name": "PersonName",
+							"type": "AMAZON.Person",
+							"samples": [
+								"My name is {PersonName}",
+								"I am {PersonName}",
+								"{PersonName}"
+							]
+						},
+						{
+							"name": "CountryName",
+							"type": "AMAZON.Country",
+							"samples": [
+								"I want to visit {CountryName}",
+								"{CountryName}"
+							]
+						},
+						{
+							"name": "Count",
+							"type": "AMAZON.NUMBER",
+							"samples": [
+								"with {Count} other",
+								"{Count}"
+							]
+						}
+					],
+					"samples": [
+						"My name is {PersonName} and I want to visit {CountryName} with my {Count} friends",
+						"With {Count} friends",
+						"I want to visit {CountryName}",
+						"My name is {PersonName}"
+					]
+				}
+			],
+			"types": []
+		},
+		"dialog": {
+			"intents": [{
+				"name": "AddUserPrefrence",
+				"confirmationRequired": false,
+				"prompts": {},
+				"slots": [{
+						"name": "PersonName",
+						"type": "AMAZON.Person",
+						"confirmationRequired": false,
+						"elicitationRequired": true,
+						"prompts": {
+							"elicitation": "Elicit.Slot.664214356346.138385230908"
+						}
+					},
+					{
+						"name": "CountryName",
+						"type": "AMAZON.Country",
+						"confirmationRequired": false,
+						"elicitationRequired": true,
+						"prompts": {
+							"elicitation": "Elicit.Slot.664214356346.1030841780901"
+						}
+					},
+					{
+						"name": "Count",
+						"type": "AMAZON.NUMBER",
+						"confirmationRequired": false,
+						"elicitationRequired": true,
+						"prompts": {
+							"elicitation": "Elicit.Slot.664214356346.870704777881"
+						}
+					}
+				]
+			}]
+		},
+		"prompts": [{
+				"id": "Elicit.Slot.664214356346.138385230908",
+				"variations": [{
+					"type": "PlainText",
+					"value": "Tell me your name"
+				}]
+			},
+			{
+				"id": "Elicit.Slot.664214356346.1030841780901",
+				"variations": [{
+					"type": "PlainText",
+					"value": "Which Country you want to visit?"
+				}]
+			},
+			{
+				"id": "Elicit.Slot.664214356346.870704777881",
+				"variations": [{
+					"type": "PlainText",
+					"value": "With how many friends?"
+				}]
+			}
+		]
+	}
+}

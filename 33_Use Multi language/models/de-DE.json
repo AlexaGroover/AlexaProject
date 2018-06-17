@@ -1,0 +1,55 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "fourth demo",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PersonNameIntent",
+                    "slots": [
+                        {
+                            "name": "PersonName",
+                            "type": "AMAZON.Person"
+                        }
+                    ],
+                    "samples": [
+                        "My name is {PersonName}",
+                        "I am {PersonName}"
+                    ]
+                },
+                {
+                    "name": "CountryNameIntent",
+                    "slots": [
+                        {
+                            "name": "CountryName",
+                            "type": "AMAZON.Country"
+                        }
+                    ],
+                    "samples": [
+                        "I want to visit {CountryName}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}

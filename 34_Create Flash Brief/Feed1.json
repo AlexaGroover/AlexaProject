@@ -1,0 +1,13 @@
+[{
+    "uid": "urn:uuid:71e9d525-e32b-41dc-9022-2d6e99c86546",
+    "updateDate": "2018-06-02T00:00:00.0Z",
+    "titleText": "Brief Part 1",
+    "mainText": "This is first item in Brief.",
+    "redirectionUrl": "https://www.amazon.com"
+}, {
+    "uid": "urn:uuid:45900629-f836-4d7d-9e83-d467ab89c197",
+    "updateDate": "2018-06-02T01:00:00.0Z",
+    "titleText": "Brief Part 2",
+    "mainText": "This is second item in Brief.",
+    "redirectionUrl": "https://www.amazon.com"
+}]

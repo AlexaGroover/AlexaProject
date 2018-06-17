@@ -1,0 +1,87 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my skill",
+            "intents": [{
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloIntent",
+                    "slots": [],
+                    "samples": [
+                        "my skill Howdy",
+                        "Hey",
+                        "Hello"
+                    ]
+                },
+                {
+                    "name": "DisplayGreetings",
+                    "slots": [{
+                        "name": "PersonName",
+                        "type": "AMAZON.Person"
+                    }],
+                    "samples": [
+                        "I am {PersonName}",
+                        "My name is {PersonName} "
+                    ]
+                },
+                {
+                    "name": "FavoriteLanguage",
+                    "slots": [{
+                        "name": "LanguageName",
+                        "type": "ProgrammingLanguages"
+                    }],
+                    "samples": [
+                        "My favorite language is {LanguageName}",
+                        "I love {LanguageName}",
+                        "I like {LanguageName}"
+                    ]
+                }
+            ],
+            "types": [{
+                "name": "ProgrammingLanguages",
+                "values": [{
+                        "id": "1",
+                        "name": {
+                            "value": "Python",
+                            "synonyms": [
+                                "Py"
+                            ]
+                        }
+                    },
+                    {
+                        "id": "2",
+                        "name": {
+                            "value": "C#",
+                            "synonyms": [
+                                ".Net",
+                                "C Sharp"
+                            ]
+                        }
+                    },
+                    {
+                        "id": "3",
+                        "name": {
+                            "value": "PHP"
+                        }
+                    },
+                    {
+                        "id": "4",
+                        "name": {
+                            "value": "JavaScript"
+                        }
+                    }
+                ]
+            }]
+        }
+    }
+}
